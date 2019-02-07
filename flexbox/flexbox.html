@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Copatible" content="ie=edge" />
+        <title>Flexbox</title>
+        <!-- Flex 기본 
+            flex의 경우 대상에게 지정하는 것이아니고, 대상의 상위 단계에서 지정
+            flex-container, flex-items 두 관계는 직접적으로 종속관계에 있어야 함
+
+            justify-content 
+            flex-start (default)
+            flex-end
+            space-between
+            space-around
+            
+
+        -->
+        <style>
+            /* .father : flex-container */
+            .father {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            /* .box : flex-items*/
+            .box {
+                width: 100px;
+                height: 100px;
+                background: white;
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="father">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+</html>
