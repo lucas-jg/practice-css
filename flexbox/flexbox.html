@@ -29,6 +29,8 @@
             default : nowrap
             nowrap일때는 크기에 따라 찌그러짐, 하지만 warp 속성을 주면 flex-items의 속성들을 고려하여 flex가 동작함
 
+            align-self : flex-itmes에게 주는 옵션
+
         -->
         <style>
             /* .father : flex-container */
@@ -57,6 +59,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+
+            .box:first-child {
+                align-self: flex-end;
             }
         </style>
     </head>
