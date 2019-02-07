@@ -24,15 +24,21 @@
             main axis에 있는 아이템을 움직이려면, justify-content
 
             flex-direction : row 기본 (column 선택)
+
+            flex-wrap 옵션
+            default : nowrap
+            nowrap일때는 크기에 따라 찌그러짐, 하지만 warp 속성을 주면 flex-items의 속성들을 고려하여 flex가 동작함
+
         -->
         <style>
             /* .father : flex-container */
             .father {
                 display: flex;
+                flex-wrap: wrap;
                 /* main axis는 flex-direction에 의해 결정됨 */
                 flex-direction: row;
                 /* main axis */
-                justify-content: space-between;
+                justify-content: center;
                 /* cross axis */
                 align-items: center;
                 height: 100vh;
@@ -40,19 +46,26 @@
 
             /* .box : flex-items*/
             .box {
-                width: 100px;
-                height: 100px;
+                width: 300px;
+                height: 300px;
                 background: white;
-                border: 1px solid red;
+                border: 3px solid gray;
+                font-size: 50px;
+                font-weight: 600;
+
+                /* Flex를 이용한 div 내용 가운데 정렬 */
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         </style>
     </head>
 
     <body>
         <div class="father">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
         </div>
     </body>
 </html>
