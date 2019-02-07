@@ -14,14 +14,28 @@
             flex-end
             space-between
             space-around
-            
+           
+            수직으로 아이템을 관리하기 하기 위해 align-items를 사용
+            이때, flex의 경우 width, height를 기준으로 정리하기 때문에
+            수직으로 아이템을 관리하기 위해서는 align-items 써도 
+            충분한 height가 필요
 
+            corss axis에 있는 아이템을 움직이려면, align-items
+            main axis에 있는 아이템을 움직이려면, justify-content
+
+            flex-direction : row 기본 (column 선택)
         -->
         <style>
             /* .father : flex-container */
             .father {
                 display: flex;
+                /* main axis는 flex-direction에 의해 결정됨 */
+                flex-direction: row;
+                /* main axis */
                 justify-content: space-between;
+                /* cross axis */
+                align-items: center;
+                height: 100vh;
             }
 
             /* .box : flex-items*/
