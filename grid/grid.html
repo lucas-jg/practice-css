@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Copatible" content="ie=edge" />
+        <title>grid</title>
+        <!-- Flex 기본 
+          
+
+        -->
+        <style>
+            .father {
+                display: grid;
+                grid-template-columns: 300px 500px;
+                grid-template-rows: 300px 120px;
+                grid-gap: 5px;
+                /* grid-auto-columns 쓰기위해서는 grid-auto-flow: columns 필요 */
+                grid-auto-rows: 60px;
+            }
+
+            .box {
+                background: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="father">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+</html>
