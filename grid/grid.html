@@ -12,30 +12,28 @@
         <style>
             .father {
                 display: grid;
+                grid-auto-rows: 200px;
                 grid-gap: 5px;
                 /* grid-auto-columns 쓰기위해서는 grid-auto-flow: columns 필요 */
-                grid-auto-rows: 200px;
-                grid-template-areas:
-                    'header header header'
-                    'content content sidebar'
-                    'content content sidebar'
-                    'footer footer footer';
+
+                /* fr -> fraction 최대한 공간을 차지하라라는 의미 */
+
+                /* grid-template-columns: 1fr 0.5fr 1fr 3fr; 
+                    repeat(4, 1fr); -> 1fr 1fr 1fr 1fr
+                */
+                grid-template-columns: minmax(400px, 2fr) repeat(3, 1fr);
             }
 
             .first {
-                grid-area: header;
                 background: #f1c40f;
             }
             .second {
-                grid-area: sidebar;
                 background: #27ae60;
             }
             .third {
-                grid-area: footer;
                 background: #3498db;
             }
             .fourth {
-                grid-area: content;
                 background: #d35400;
             }
         </style>
@@ -43,7 +41,12 @@
 
     <body>
         <div class="father">
-            <div class="first"></div>
+            <div class="first">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus consequatur
+                exercitationem perspiciatis repudiandae magni, similique provident vitae corrupti
+                ratione dolores quod animi deleniti debitis porro quibusdam consequuntur et. Culpa,
+                facilis!
+            </div>
             <div class="second"></div>
             <div class="third"></div>
             <div class="fourth"></div>
